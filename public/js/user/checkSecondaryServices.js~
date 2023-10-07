@@ -1,0 +1,32 @@
+$(document).ready(function() 
+{
+	$("#mainservice").change(function()
+	{
+		var mainservice_id = null;
+		var secondaryservice = null;
+		
+		var mainservice_id = $('#mainservice').val();
+		$.ajax( 
+		{
+			type: "GET",
+			url: "/no/bruker/sjekk-servicer-for-hovedfag" + '/' + mainservice_id,
+			cache: false,
+			dataType: 'json',
+			success: function(response) 
+			{
+				console.log(response);
+			
+				secondaryservice = jQuery.parseJSON(response);
+
+				$("#secondaryservice option[value='0']").remove()
+				$("#secondaryservice option[value='1']").remove()
+				$("#secondaryservice option[value='2']").remove()
+				$("#secondaryservice option[value='3']").remove()
+				$("#secondaryservice option[value='4']").remove()
+				$.each(secondaryservice, function(key,value) {
+						$('#secondaryservice').append($('<option>').text(value.spesialisering).attr('value', key+1));
+				});
+			}
+		});
+	}); 
+});

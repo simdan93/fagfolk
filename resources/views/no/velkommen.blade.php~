@@ -1,0 +1,10 @@
+@extends('no.layouts.master')
+ 
+@section('content')
+	<velkommen></velkommen>
+@stop
+
+@section('scripts')
+@stop
+
+

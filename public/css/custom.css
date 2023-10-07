@@ -1,0 +1,506 @@
+* {
+	box-sizing:border-box;
+}
+
+body {
+	margin: 0;
+}
+nav {
+	 display:block;
+}
+.wrapper {
+	//margin-left: 20px;
+	//margin-right: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	top:0;
+}
+.wrapper:after,.wrapper:before{
+	content:" ";
+	display:table;
+}
+.wrapper:after{
+	clear:both
+}
+
+.col-md-8-ds{
+	width:40%
+}
+.col-md-offset-4-ds{
+	margin-left:15%
+}
+
+.stdDropdownBox{
+	width:200px;
+}
+
+.navbar-fixed{
+	overflow: hidden;
+	position:fixed;
+	height:80px;
+	border:1px solid transparent;
+	width: 100%;
+	top:0;
+}
+
+.navbar-top-placement{
+	width: 100%;
+}
+
+.navbar-top-links-box{
+	margin-right:20%;
+	margin-left: 20%;
+}
+
+.navbar-top-links {
+	margin-left: 15px;
+	margin-top: 20px;
+	padding: 5px 5px 5px 5px;
+}
+/*
+.navbar-top-links .dropdown-menu li a {
+    display: block;
+}
+
+.navbar-top-links .dropdown-menu li a:last-child {
+    margin-right: 0;
+}
+
+.navbar-top-links .dropdown-menu li a {
+    padding: 3px 20px;
+    min-height: 0;
+}
+
+.navbar-top-links .dropdown-menu li a div {
+    white-space: normal;
+}
+
+.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-bottom .navbar-collapse {
+  max-height: 340px;
+}
+.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-bottom .navbar-collapse {
+  max-height: 340px;
+}
+
+.navbar-top-links .dropdown-messages,
+.navbar-top-links .dropdown-tasks,
+.navbar-top-links .dropdown-alerts {
+    width: 310px;
+    min-width: 0;
+}
+*/
+.login-register-container{
+	width: 1170px;
+    margin-left: 200px;
+	margin-right: 200px;
+	padding-left: 15px;
+    padding-right: 0;
+}
+
+.column {
+	float: left;
+	background-color: #fff;
+}
+.column.sidebar{
+	width: 15%;
+}
+
+.column.sidebar li {
+	border-bottom: 1px solid #e7e7e7;
+	border-top: 1px solid #e7e7e7;
+	display:inline-block;
+	width:100%;
+  height:50px;
+	line-height:50px;
+}
+
+.column.sidebar a {
+	text-decoration: none;
+  width: 100%;
+	height:100%;
+	margin: 0px;
+	display:block;
+	padding-left: 10px;
+	font-size:16px;
+}
+
+.column.sidebar ul li.active > a {
+    background-color: #eee;
+}
+/*
+@media(min-width:768px) {
+    .column.sidebar {
+        width: 15%;
+				background-color: #fff
+    }
+}
+*/
+.column.page-wrapper {
+    padding: 0 30px 30px 30px;
+		width: 70%;
+		border: 1px solid #e7e7e7;
+		min-height: 726px;
+}
+/*
+@media(min-width:768px) {
+    .column.page-wrapper {
+				width: calc(65% - 10px);
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+}
+*/
+.column.sidebar-right{
+	width: 15%;
+	min-height: 726px;
+	border: 1px solid #e7e7e7;
+	padding: 5px;
+}
+
+@media (max-width: 600px) {
+	.column.sidebar, .column.page-wrapper. .column.sidebar-right {
+		width: 100%;
+	}
+}
+.modal-slide {
+	display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+.modal-slide-content {
+	position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+.mySlides {
+	display: none;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+.close-slide{
+	color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close-slide:hover,
+.close-slide:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image-resize {
+	float:left;
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+.welcomeBox {
+    position: relative;
+    width: 100%;
+    background-position: calc(50% + 154px) 0;
+}
+
+.welcome-text-box{
+	/*background: #06c;*/
+	 top: 50%;
+	 left: 50%;
+	 width: 100%;
+	 transform: translate(-50%, -50%);
+	 /*margin-left: auto;*/
+	 /*margin-right: auto;*/
+	 color:white;
+	 position: absolute;
+}
+
+.loginOrRegisterBox {
+	position: relative;
+	//overflow:hidden;
+	margin-right: 30%;
+	margin-left: 30%;
+	margin-top:200px;
+}
+
+.introduction-box{
+	color:#fff;
+	position: relative;
+	width: 100%;
+	background-color: #3097d1;
+	text-align: center;
+  overflow: hidden;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.intro-text-box{
+	float: left;
+	margin-left: 20%;
+	margin-right: 20px;
+	text-align: left;
+	width: 30%;
+}
+.intro-img-box{
+	float: left;
+	padding-top: 10px;
+	width: 27%;
+}
+
+.service-promo {
+    position: relative;
+    height: 100%;
+		margin-top:20px;
+    margin-right: 20%;
+		margin-left:20%;
+		margin-bottom:20px;
+    text-align: center;
+}
+
+.standardBox {
+	border-style:solid;
+	border-width:1px;
+	padding: 5px;
+}
+
+.findHelpBox {
+	position: relative;
+	width: 100%;
+}
+.surveyBox{
+		border-style:solid;
+		border-width:1px;
+		border-color: #3097d1;
+		background-color:#4db6f2;
+		padding: 5px;
+}
+.singleBox{
+		border-style:solid;
+		border-width:1px;
+		border-color: #e5b57e;
+		background-color:#e8c59d;
+		padding: 5px;
+}
+
+.mainServiceRow {
+	position: relative;
+	width: 100%;
+	overflow:hidden;
+}
+.mainServiceBox {
+	float:left;
+	width:33.33333333%;
+	background-color: white;
+	border: 1px solid #DDDDDD;
+	padding: 5px;
+	height: 300px;
+}
+.mainServiceBox:hover {
+	background-color: #6fb6df;
+}
+
+.mainServiceBox2 {
+	border-bottom: 0px solid #DDDDDD;
+	background-color: #e5e5e5;
+}
+
+.secServiceRow {
+	position: relative;
+	width: 100%;
+	overflow:hidden;
+	background-color: white;
+	border-right: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+	padding: 10px;
+	display:none;
+}
+
+.secServiceRow2 {
+	background-color: #e5e5e5;
+}
+
+.secServiceInnerRow {
+	position: relative;
+	width: 100%;
+	overflow:hidden;
+	#background-color: #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+}
+
+.secServiceBox {
+	float:left;
+	width:33.33333333%;
+	background-color: white;
+	border: 1px solid #DDDDDD;
+	padding: 5px;
+	height: 300px;
+}
+
+.secServiceBox:hover {
+	background-color: #6fb6df;
+}
+
+.secServiceBox2 {
+	border-bottom: 0px solid #DDDDDD;
+	background-color: #dbdbdb;
+}
+
+.describtionRow {
+	position: relative;
+	width: 100%;
+	overflow:hidden;
+	border-right: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 10px;
+	display:none;
+}
+
+.describtionRow2 {
+	background-color: #dbdbdb;
+}
+
+.describtionBox {
+	float:left;
+	width:33.33333333%;
+	background-color: white;
+	border: 1px solid #DDDDDD;
+	padding-right: 10px;
+	padding-left: 10px;
+	height: 200px;
+}
+.surveyBox.infoBox, .singleBox.infoBox{
+		background-color:#fff
+}
+
+.singleBox.inactive{
+		background-color:#c4c4c4;
+		border-color: #474747;
+}
+.surveyBox.inactive{
+		background-color:#8c8c8c;
+		border-color: #474747;
+		color: #fff;
+}
+.service-name {
+	margin: 0;
+  font-weight: 500;
+  position: absolute;
+  padding: 10px 20px;
+  z-index: 1;
+}
+
+.newsBox {
+	background-color: white;
+}
+.surveyBox.infoBox.inactive, .singleBox.infoBox.inactive{
+		border-color: #474747;
+		background-color:#fff;
+		color: #636b6f;
+}
+
+.footer{
+	color: #aaaaaa;
+	width:100%;
+	height:250px;
+  background-color: #636b6f;
+  text-align: center;
+}
+
+.footer h4 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-bottom: 10px;
+		padding-top: 10px;
+    margin-bottom: 10px;
+    //border-bottom: 1px solid #168d91;
+}
+.footer ul li a p {
+    color: #8b96a3;
+    text-decoration: none;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+}

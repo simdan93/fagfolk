@@ -1,0 +1,21 @@
+### Laravel ###
+/vendor
+/node_modules
+npm-debug.log
+
+### Laravel 5 ###
+/public/storage
+/public/hot
+/storage/*.key
+.env
+.env.*.php
+.env.php
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+yarn-error.log
+
+### Custom ###
+
+

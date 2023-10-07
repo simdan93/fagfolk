@@ -1,0 +1,52 @@
+$(document).ready(function() 
+{	
+	$("#checkInfo").click(function()
+	{
+		if($('#mainservice').val() == 0)
+			var mainservice = 'null';
+		else
+			var mainservice = $('#mainservice').val();
+		
+		if($('#secondaryservice').val() == 0)
+			var secondaryservice = 'null';
+		else
+			var secondaryservice = $('#secondaryservice').val();
+		
+		if($('#postnummer').val() == 0)
+			var postnummer = 0;
+		else
+			var postnummer = $('#postnummer').val();
+		
+		if($('#tilgjengelig').val() == 0)
+			var tilgjengelig = '0/0/0';
+		else
+			var tilgjengelig = $('#tilgjengelig').val();
+		
+		$.ajax( 
+		{
+			type: "GET",
+			url: "/no/bruker/sjekk-info",
+			data: {mainservice: mainservice, secondaryservice: secondaryservice, postnummer: postnummer, tilgjengelig: tilgjengelig},
+			cache: false,
+			dataType: 'json',
+			success: function(data) 
+			{
+				console.log('sjekk-info-user');
+				
+				var obj = jQuery.parseJSON(data);
+				var counter = 0;
+				$.each(obj, function(key,value) 
+				{
+					counter++;
+				});
+				
+				if(counter == 0)
+					$("#counter").html("Ingen selskap funnet med de kriteriene.");
+				else if(counter == 1)
+					$("#counter").html("Ett selskap funnet med de kriteriene.");
+				else
+					$("#counter").html(counter + " selskaper funnet med de kriteriene.");
+			}
+		});
+	});
+});

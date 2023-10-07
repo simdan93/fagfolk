@@ -1,0 +1,23 @@
+
+08.09.18
+Nytt
+- Kan velge å legge til egendefinert addresse ved Finn fagfolk (for kunde og selskap).
+- Etter registrert addresse ha muligheten til å lagre addressen for senere bruk.
+- Toggle knapp for interessert og ikke interessert i forespørseler.
+
+Endring:
+- Mer informasjon fra fagman respons + mer informasjon når kunde askepterer.
+
+?.18
+- Mulighet til å lagre addressen med navn (hjemme, hytte osv). Dette må kunne endres.
+feedback fra kunde:
+- Rankering. Hvis kunde gir en rankering med f. eks bare en stjerne så vil det bli satt en karantenetid som betyr for selskapet at de ikke kan gi respons på kunder på en viss tid.
+
+- for at bruker kan endre mobilnr må passord bekreftes.
+
+- Varsellampe.
+
+Toggle knapp for interessert og ikke interessert i forespørseler.
+
+05.07.19
+ - Bedre kommunikasjon mellom validering og bruker ved registrering.

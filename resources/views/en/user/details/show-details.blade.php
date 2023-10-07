@@ -1,0 +1,113 @@
+@extends('layouts.master')
+@section('title', 'Registration of companydetails')
+
+@section('content')
+<div class="panel panel-default">
+	<div class="panel-heading">User information</div>
+		<div class="panel-body">
+	
+			<h2>Details</h2>
+			
+			@if(session()->has('detailsUpdated'))
+				<div class="alert alert-success">
+					{{ session()->get('detailsUpdated') }}
+				</div>
+			@endif
+			
+			<div class="form-group">
+				<table border = 1>
+					<tr>
+						<td>Name</td>
+						<td>Last name</td>
+						<td>Age</td>
+						<td>Phone</td>
+						<td>Cell</td>
+						<td>Email</td>
+					</tr>
+					@foreach ($userDetails as $user)
+					<tr>
+						<td>{{ $user->name }}</td>
+						<td>{{ $user->lastName }}</td>
+						<td>{{ $user->age }}</td>
+						<td>{{ $user->phone }}</td>
+						<td>{{ $user->cell }}</td>
+						<td>{{ $user->email }}</td>
+					</tr>
+					@endforeach
+				</table>
+			</div>
+		
+			<div class="form-group">
+				<a href="{{ route('user.update-details') }}">Update details</a>
+			</div>
+			<h2>Addresses</h2>
+			
+			@if(session()->has('homeAddrUpdated'))
+				<div class="alert alert-success">
+					{{ session()->get('homeAddrUpdated') }}
+				</div>
+			@endif
+			
+			@if($homeAddress != null)
+				<div class="form-group">
+					<h3>Home address</h3>
+					<table border = 1>
+						<tr>
+							<td>Adress</td>
+							<td>Post nr</td>
+							<td>Location</td>
+							<td></td>
+						</tr>
+						@foreach ($homeAddress as $home)
+						<tr>
+							<td>{{ $home->address }}</td>
+							<td>{{ $home->postNr }}</td>
+							<td>{{ $home->location }}</td>
+							<td><a href="{{ route('user.update-home-address') }}">Update address</a></td>
+						</tr>
+						@endforeach
+					</table>
+				</div>
+			@endif
+			@if($payAddress != null)
+				<div class="form-group">
+					<h3>Pay address</h3>
+					
+					@if(session()->has('payAddrUpdated'))
+						<div class="alert alert-success">
+							{{ session()->get('payAddrUpdated') }}
+						</div>
+					@endif
+					
+					<table border = 1>
+						<tr>
+							<td>Adress</td>
+							<td>Post nr</td>
+							<td>Location</td>
+							<td></td>
+						</tr>
+						@foreach ($payAddress as $pay)
+						<tr>
+							<td>{{ $pay->address }}</td>
+							<td>{{ $pay->postNr }}</td>
+							<td>{{ $pay->location }}</td>
+							<td><a href="{{ route('user.update-pay-address') }}">Update address</a></td>
+						</tr>
+						@endforeach
+					</table>
+				</div>
+			@endif
+			@if($payAddress == null || $homeAddress == null)
+				<div class="form-group">
+					<a href="{{ route('user.register-addresses') }}">Register addresses</a>
+				</div>
+			@endif
+			</div>
+			
+			<div class="form-group">
+				<button onclick="location.href='{{ route('user.dashboard') }}'">Go back</button>
+			</div>
+		</div>
+	</div>
+</div>
+@endsection
